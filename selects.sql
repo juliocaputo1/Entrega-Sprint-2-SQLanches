@@ -2,7 +2,14 @@
 -- Seleções de dados
 -- 1)
 SELECT
-    id
+    pe.id,
+    pe.status,
+    pe.cliente_id,
+    pr.id,
+    pr.nome,
+    pr.tipo,
+    pr."preço",
+    pr.pts_de_lealdade
 FROM
     produtos_pedidos pp
     INNER JOIN pedidos pe ON pe.id = pp.pedido_id
